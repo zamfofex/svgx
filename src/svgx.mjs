@@ -185,7 +185,7 @@ let svgx = window => node =>
 	return self
 }
 
-export let optimize = (svg, {window, plugins = {}} = {}) =>
+export let optimize = (svg, {window, plugins = []} = {}) =>
 {
 	let last = null
 	let group
