@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>svgx test</title>
+		<script src="main.mjs" type="module"></script>
+		<style>
+			pre { white-space: pre-wrap; }
+			iframe { width: 100%; height: 85vh; }
+			
+			.result
+			{
+				display: grid;
+				grid-template: auto / 1fr 1fr;
+				gap: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>svgx test</h1>
+		<p>
+			<textarea></textarea>
+		</p>
+		<p>
+			<button>optimize</button>
+		</p>
+		<p>
+			<em>note: scroll down for svg output</em>
+		</p>
+		<div class="result">
+			<div>
+				<h2>original</h2>
+				<p><iframe id="original"></iframe></p>
+			</div>
+			<div>
+				<h2>optimized</h2>
+				<p><iframe id="optimized"></iframe></p>
+			</div>
+		</div>
+		<h2>svg output</h2>
+		<pre><code id="output">svg output will appear here.</code></pre>
+		<h2>license</h2>
+		<p>
+			<a href="https://github.com/Zambonifofex/svgx/blob/master/license.md">you can find the license (zero-clause bsd) on github.</a>
+		</p>
+	</body>
+</html>

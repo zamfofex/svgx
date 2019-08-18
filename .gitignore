@@ -1,0 +1,11 @@
+*
+!package.json
+!public
+!public/index.html
+!src
+!src/*
+!webpack.config.js
+!license.md
+!.nowignore
+!.gitignore
+!readme.md
