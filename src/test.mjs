@@ -4,7 +4,7 @@ import process from "process"
 import {removeURLQuotes, collapseSingleUse, styleToPresentation} from "./custom.mjs"
 import {defaultPlugins} from "./svgo.mjs"
 
-let plugins = [{plugin: styleToPresentation}, ...defaultPlugins, {plugin: removeURLQuotes}, {plugin: collapseSingleUse}]
+let plugins = [{plugin: styleToPresentation}, {plugin: collapseSingleUse}, ...defaultPlugins, {plugin: removeURLQuotes}]
 
 let {JSDOM} = jsdom
 
@@ -12,17 +12,9 @@ let main = async () =>
 {
 	let dom = await JSDOM.fromFile(process.argv[2] || "/dev/stdin", {contentType: "image/svg+xml"})
 	
-	let data
+	optimize(dom.window.document, {window: dom.window, plugins})
 	
-	for(let i = 0; i < 16; i++)
-	{
-		optimize(dom.window.document, {window: dom.window, plugins})
-		let newdata = dom.serialize()
-		if(data === newdata) break
-		data = newdata
-	}
-	
-	process.stdout.write(data)
+	process.stdout.write(dom.serialize())
 }
 
 main()

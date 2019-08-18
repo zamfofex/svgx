@@ -18,7 +18,7 @@ document.querySelector("button").addEventListener("click", () =>
 	let optimized = doc.documentElement
 	let original = optimized.cloneNode(true)
 	
-	optimize(doc, {window, plugins: [{plugin: styleToPresentation}, ...defaultPlugins, {plugin: removeURLQuotes}, {plugin: collapseSingleUse}]})
+	optimize(doc, {window, plugins: [{plugin: collapseSingleUse}, {plugin: styleToPresentation}, ...defaultPlugins, {plugin: removeURLQuotes}]})
 	
 	outOriginal.contentDocument.body.append(original)
 	outOptimized.contentDocument.body.append(optimized)
