@@ -26,6 +26,13 @@ There is a [webpage] available to try svgx out.
 
 [webpage]: https://svgx.zambonifofex.now.sh/ "svgx on Now"
 
+It is also possible to deploy this project by yourself by using the following commands:
+
+~~~
+git clone https://github.com/Zambonifofex/svgx.git
+now svgx
+~~~
+
 License
 ---
 
