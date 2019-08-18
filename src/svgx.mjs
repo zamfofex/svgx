@@ -87,7 +87,10 @@ let svgx = window => node =>
 			getPropertyPriority: name => node.style.getPropertyPriority(name),
 			getPropertyValue: name => node.style.getPropertyValue(name),
 			item: name => node.style.item(name),
-			get length() { return node.style.length },
+			get length()
+			{
+				if(node.style) return node.style.length
+			},
 			removeProperty: name => node.style.removeProperty(name),
 			setProperty: (name, value, priority = "") => node.style.setProperty(name, value, priority),
 		},
