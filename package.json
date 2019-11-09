@@ -10,5 +10,6 @@
 	},
 	"scripts": {
 		"build": "webpack --output public/main.mjs"
-	}
+	},
+	"main": "src/svgx.mjs"
 }
