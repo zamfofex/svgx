@@ -4,7 +4,7 @@ import process from "process"
 import {removeURLQuotes, collapseSingleUse, styleToPresentation} from "./custom.mjs"
 import {defaultPlugins} from "./svgo.mjs"
 
-let plugins = [{plugin: styleToPresentation}, {plugin: collapseSingleUse}, ...defaultPlugins, {plugin: removeURLQuotes}]
+let plugins = [{plugin: styleToPresentation}, {plugin: collapseSingleUse}, ...defaultPlugins(), {plugin: removeURLQuotes}]
 
 let {JSDOM} = jsdom
 

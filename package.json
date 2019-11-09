@@ -1,11 +1,12 @@
 {
+	"version": "0.0.1",
 	"devDependencies": {
 		"webpack": "4.39.2",
 		"webpack-cli": "3.3.7"
 	},
 	"dependencies": {
 		"svgo": "1.3.0",
-		"jsdom": "15.1.1"
+		"jsdom": "15.2.0"
 	},
 	"scripts": {
 		"build": "webpack --output public/main.mjs"
